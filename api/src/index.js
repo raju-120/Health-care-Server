@@ -38,6 +38,7 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.send(`Server is running on port ${process.env.PORT}`);
 });
+
 app.use("/api/auth", authRouter);
 app.use("/api/posts", dropPostRouter);
 app.use("/api/comments", commentsRouter);
